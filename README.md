@@ -41,7 +41,7 @@ img{
   border:1px solid black;
   border-radius:20px;
   justify-content:center;
-  margin-left:40px;
+  margin-left:50px;
 }
 footer{
   font-weight:bold;
