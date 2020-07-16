@@ -2,7 +2,7 @@
  <head> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Most beautiful places</title> 
- <style>
+  <style>
    body{
   background-color:orange;
 }
@@ -35,22 +35,30 @@ header{
  width:430px;
  box-shadow:4px 4px 4px 5px black;
 }
+img{
+  display:flex;
+  flex-wrap:wrap;
+  border:1px solid black;
+  border-radius:20px;
+  justify-content:center;
+  margin-left:40px;
+}
 footer{
   font-weight:bold;
   text-align:center;
   border:2px solid black;
   border-radius:3px;
 }
- </style>
+ </style> 
  </head> 
- <body>
- <script>
+ <body> 
+  <script>
      var places={
      india:[
        {
        Country:"India",
        State:"Uttar Pradesh",
-       Place:"Tajmahal"
+       Place:"Tajmahal",
        },
        {
        Country:"India",
@@ -112,8 +120,12 @@ details.append(state);
 var place=document.createElement("p");
 place.textContent="Place: "+places.india[i].Place;
 details.append(place);
-
-
+ 
+var image=document.createElement("img");
+image.setAttribute("src","ind"+i+".jpeg");
+image.setAttribute("width","200px");
+image.setAttribute("height","200px");
+details.append(image);
 }
 
 for(i=0;i<places.usa.length;i++)
@@ -129,11 +141,17 @@ details.append(country);
 var place=document.createElement("p");
 place.textContent="Place: "+places.usa[i].Place;
 details.append(place);
+
+var image=document.createElement("img");
+image.setAttribute("src","usa"+i+".jpeg");
+image.setAttribute("width","200px");
+image.setAttribute("height","200px");
+details.append(image);
 }
 var footer=document.createElement("footer");
 footer.textContent="© All rights reserved 2020";
 body.append(footer);
 
- </script>
+ </script> 
  </body>
 </html>
